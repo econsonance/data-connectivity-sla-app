@@ -1,0 +1,23 @@
+{
+    "targets": [
+        {
+            "driver":"azblob",
+            "condition":"on-success",
+            "type": "webhook",
+            "method": "get-querystring",
+            "url":"any-webhook-url"
+        },
+        {
+            "driver":"azblob",
+            "condition":"on-failure",
+            "type": "stdout"
+        },
+        {
+            "driver":"awss3",
+            "condition":"on-success",
+            "type": "webhook",
+            "method": "post-body",
+            "url":"any-webhook-url"
+        }
+    ]
+}

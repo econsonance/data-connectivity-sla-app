@@ -1,0 +1,46 @@
+package com.example.helloworld;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Properties;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+
+        try {
+
+            Connection conn = null;
+            String url = "jdbc:snowflake://cd35378.switzerland-north.azure.snowflakecomputing.com/?private_key_file=/home/jorge/code/github/local/jdbcdemo/rsa_key.p8";
+            String query = "SELECT V, T FROM SNOWFLAKE_SAMPLE_DATA.WEATHER.WEATHER_14_TOTAL LIMIT 10;";
+           
+            Statement stmt = null;
+            ResultSet result = null;
+            Properties prop = new Properties();
+            prop.put("user", "jdbcuser");
+            prop.put("role", "ANALYST");
+            prop.put("warehouse", "COMPUTE_WH");
+
+
+            conn = DriverManager.getConnection(url, prop);
+            stmt = conn.createStatement();
+            result = null;
+            String column1,column2;
+            result = stmt.executeQuery(query);
+
+            while (result.next()) {
+
+                column1=result.getString("V");
+
+                System.out.println(column1);
+
+            }
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+}

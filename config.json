@@ -1,0 +1,38 @@
+{
+    "drivers": [
+        {
+            "id": "mysql",
+            "description": "MySQL",
+            "namespace":"com.mysql.jdbc.Driver",
+            "jdbc":"mysql-connector-java-8.0.27.jar"
+        },
+        {
+            "id": "postgres",
+            "description": "Postgres",
+            "namespace":"org.postgresql.Driver",
+            "jdbc":"postgresql-42.3.1.jar"
+        },
+        {
+            "id": "sqlserver",
+            "description": "Microsoft SQL Server",
+            "namespace":"com.microsoft.sqlserver.jdbc.SQLServerDriver",
+            "jdbc":"sqljdbc42.jar"
+        },
+        {
+            "id": "snowflake",
+            "description": "Snowflake",
+            "jdbc":"snowflake-jdbc-3.13.14.jar"
+        },
+        {
+            "id":"hana",
+            "namespace":"com.sap.db.jdbc.Driver",
+            "description":"SAP HANA",
+            "jdbc":"ngdbc-2.11.14.jar"
+        },
+        {
+            "id": "azureblob",
+            "description": "Azure Storage Account Blob",
+            "jdbc":"azure-storage-8.0.0.jar,hadoop-azure-2.7.7.jar"
+        }
+    ]
+}
