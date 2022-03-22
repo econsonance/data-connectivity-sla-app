@@ -1,19 +1,21 @@
 {
     "targets": [
         {
-            "driver":"azblob",
+            "driver":"mysql",
+            "conn":"the-connection-string",
             "condition":"on-success",
             "type": "webhook",
             "method": "get-querystring",
             "url":"any-webhook-url"
         },
         {
-            "driver":"azblob",
+            "driver":"postgres",
+            "conn":"the-connection-string",
             "condition":"on-failure",
             "type": "stdout"
         },
         {
-            "driver":"awss3",
+            "driver":"sqlserver",
             "condition":"on-success",
             "type": "webhook",
             "method": "post-body",
