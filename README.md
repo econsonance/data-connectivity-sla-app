@@ -23,13 +23,6 @@ The following providers are supported:
 9. Snowflake
 10. HTTP Endpoint
 
-
-
-## Condition
-The App can trigger an output based on one of the following status:
-1. on-success: When the connectivity verification succeeds (default)
-2. on-failure: When the connectivity verification fails 
-
 ## Output Type
 This App currently produces one of two types of outputs:
 1. stdout: An stdout/stderr for command line (default)
@@ -50,3 +43,13 @@ The following drivers:
 **do not support JDBC or S3 API** but rather offer a hadoop-like fashion to connect.
 
 For those drivers we use code similar to: https://stackoverflow.com/questions/38624298/to-connect-to-hadoop-using-java to test the connectivity 
+
+## How to generate JAR
+`mvn clean package`
+
+## How to execute JAR
+e.g.
+- MySQL: `java -jar target/data-connectivity-sla-app-1.0.0-SNAPSHOT-jar-with-dependencies.jar file=./target-mysql.json`
+- Postgresql: `java -jar target/data-connectivity-sla-app-1.0.0-SNAPSHOT-jar-with-dependencies.jar file=./target-postgresql.json`
+- SqlServer: `java -jar target/data-connectivity-sla-app-1.0.0-SNAPSHOT-jar-with-dependencies.jar file=./target-sqlserver.json`
+- without runconfig: `java -jar target/data-connectivity-sla-app-1.0.0-SNAPSHOT-jar-with-dependencies.jar conn='jdbc:mysql://mysqldb.c88qsfo2skka.eu-central-1.rds.amazonaws.com:3306?user=admin&password=login123' driver=mysql`
