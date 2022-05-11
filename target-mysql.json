@@ -1,0 +1,6 @@
+{
+    "driver": "mysql",
+    "conn": "jdbc:mysql://mysqldb.c88qsfo2skka.eu-central-1.rds.amazonaws.com:3306?user=admin&password=login123",
+    "type": "stdout",
+    "url": "webhook-get-url"
+}

@@ -1,0 +1,6 @@
+{
+    "driver": "sqlserver",
+    "conn": "dbc:sqlserver://trustrelaytestcustomersdb.database.windows.net:1433;database=vbl;user=customer;password=SrjCIaArp9cblopJ7gGv",
+    "type": "webhook",
+    "url": "webhook-get-url"
+}

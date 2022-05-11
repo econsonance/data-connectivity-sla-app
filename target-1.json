@@ -1,25 +1,18 @@
-{
-    "targets": [
-        {
-            "driver":"mysql",
-            "conn":"the-connection-string",
-            "condition":"on-success",
-            "type": "webhook",
-            "method": "get-querystring",
-            "url":"any-webhook-url"
-        },
-        {
-            "driver":"postgres",
-            "conn":"the-connection-string",
-            "condition":"on-failure",
-            "type": "stdout"
-        },
-        {
-            "driver":"sqlserver",
-            "condition":"on-success",
-            "type": "webhook",
-            "method": "post-body",
-            "url":"any-webhook-url"
-        }
-    ]
-}
+[
+  {
+    "driver": "mysql",
+    "conn": "the-connection-string",
+    "type": "webhook",
+    "url": "any-webhook-url"
+  },
+  {
+    "driver": "postgres",
+    "conn": "the-connection-string",
+    "type": "stdout"
+  },
+  {
+    "driver": "sqlserver",
+    "type": "webhook",
+    "url": "any-webhook-url"
+  }
+]

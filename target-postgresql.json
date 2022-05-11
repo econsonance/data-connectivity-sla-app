@@ -1,0 +1,6 @@
+{
+    "driver": "postgres",
+    "conn": "jdbc:postgresql://localhost:5432/test?user=postgres&password=adminadmin",
+    "type": "stdout",
+    "url": "webhook-get-url"
+}
